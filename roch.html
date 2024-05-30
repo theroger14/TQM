@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #ffcccc, #ff99cc);
+            overflow: hidden;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .message {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .images-container img {
+            width: 45%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: float 7s infinite, fadeInOut 3s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+            }
+            50% {
+                transform: translateY(-200px) rotate(-45deg);
+            }
+            100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .heart:nth-child(odd) {
+            background-color: #ff6699;
+            animation-duration: 9s, 4s;
+        }
+
+        .heart:nth-child(even) {
+            background-color: #ff3366;
+            animation-duration: 11s, 6s;
+        }
+
+        .heart:nth-child(3n) {
+            background-color: #ff0066;
+            animation-duration: 13s, 5s;
+        }
+
+        .heart:nth-child(4n) {
+            background-color: #ff66cc;
+            animation-duration: 15s, 7s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="message">The longer I'm with you, the more I love you</div>
+
+    <div class="images-container">
+        <img src="WhatsApp Image 2024-05-30 at 6.06.17 AM (1).jpeg" alt="Image 1">
+        <img src="WhatsApp Image 2024-05-30 at 6.06.17 AM (3).jpeg" alt="Image 3">
+        <img src="WhatsApp Image 2024-05-30 at 6.06.17 AM.jpeg" alt="Image 4">
+    </div>
+
+    <!-- Generate multiple hearts -->
+    <div class="heart" style="top: 20%; left: 10%;"></div>
+    <div class="heart" style="top: 50%; left: 20%;"></div>
+    <div class="heart" style="top: 80%; left: 30%;"></div>
+    <div class="heart" style="top: 40%; left: 40%;"></div>
+    <div class="heart" style="top: 70%; left: 50%;"></div>
+    <div class="heart" style="top: 30%; left: 60%;"></div>
+    <div class="heart" style="top: 60%; left: 70%;"></div>
+    <div class="heart" style="top: 20%; left: 80%;"></div>
+    <div class="heart" style="top: 50%; left: 90%;"></div>
+</body>
+</html>
